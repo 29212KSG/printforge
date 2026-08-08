@@ -1,8 +1,9 @@
 import "./globals.css";
+import Link from "next/link"
+import Image from "next/image"
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
-import Image from "next/image";
-import PFLogoIcon from "@/public/printforge-logo-icon.svg";
-import PFLogo from "@/public/printforge-logo.svg";
+import PFLogoIcon from "@/public/printforge-logo-icon.svg"
+import PFLogo from "@/public/printforge-logo.svg"
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -26,25 +27,31 @@ export default function RootLayout({
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
         <header className="w-full bg-white">
           <nav className="flex justify-between px-6 py-4">
-            <div className="relative">
-              {/* Desktop Logo */}
-              <Image
-                src={PFLogo}
-                alt="PrintForge Logo"
-                className="w-[200px] h-auto hidden md:block"
-              />
-              {/* Mobile Logo */}
-              <Image
-                src={PFLogoIcon}
-                alt="PrintForge Logo"
-                className="w-[40px] h-auto block md:hidden"
-              />
-            </div>
+            <Link href="/">
+              <div className="relative cursor-pointer">
+                {/* Desktop Logo */}
+                <Image
+                  src={PFLogo}
+                  alt="PrintForge Logo"
+                  className="w-[200px] h-auto hidden md:block"
+                  loading="eager"
+                />
+                {/* Mobile Logo */}
+                <Image
+                  src={PFLogoIcon}
+                  alt="PrintForge Logo"
+                  className="w-[40px] h-auto block md:hidden"
+                  loading="eager"
+                />
+              </div>
+            </Link>
             <ul className="flex items-center gap-2.5">
-              <p>3D Models</p>
-              <p 
-                // href="/about"
-              >About</p>
+              <li className="text-sm uppercase cursor-pointer">
+                <Link href="/3d-models">3D Models</Link>
+              </li>
+              <li className="text-sm uppercase cursor-pointer">
+                <Link href="/about">About</Link>
+              </li>
             </ul>
           </nav>
         </header>
