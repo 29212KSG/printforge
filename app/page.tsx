@@ -16,14 +16,14 @@ export default function Home() {
 
           <div className="flex gap-4">
             <button
-              href="/3d-models"
+              // href="/3d-models"
               className="px-6 py-3 text-black transition duration-100 bg-white border-2 border-black hover:bg-black hover:text-white"
             >
               Browse Models
             </button>
           </div>
         </div>
-        <img src="/home-page-image.png" width={350} />
+        <img src="/hero-image.png" width={350} />
       </section>
     </main>
   )
