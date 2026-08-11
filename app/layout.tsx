@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
 import PFLogoIcon from "@/public/printforge-logo-icon.svg"
 import PFLogo from "@/public/printforge-logo.svg"
+import { RootLayoutProps } from "@/app/types";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -17,11 +18,7 @@ const montserratAlternates = Montserrat_Alternates({
   variable: "--font-montserrat-alternates"
 })
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
