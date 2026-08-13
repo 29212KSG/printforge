@@ -37,8 +37,8 @@ export type ModelCardProps = {
 }
 
 export type ModelsGridProps = {
-    title: string
-    models: Model[]
+  title: string
+  models: Model[]
 }
 
 export type PillProps = {
@@ -50,4 +50,10 @@ export type CategoryPageProps = {
   params: Promise<{
     categoryName: string
   }>
+}
+
+export type NavLinkProps = {
+  href: string
+  children: ReactNode
+  isActive?: boolean
 }
