@@ -1,5 +1,5 @@
 import ModelCard from "@/app/components/ModelCard"
-import { ModelsGridProps, Model } from "@/app/types"
+import type { ModelsGridProps, Model } from "@/app/types"
 
 export default function ModelsGrid({ title, models }: ModelsGridProps) {
     return (

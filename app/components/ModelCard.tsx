@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { FaRegHeart } from "react-icons/fa6"
 import Pill from "@/app/components/Pill"
-import { ModelCardProps } from "@/app/types"
+import type { ModelCardProps } from "@/app/types"
 import placeholderImg from "@/public/placeholder.svg"
 
 export default function ModelCard({ model }: ModelCardProps) {

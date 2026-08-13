@@ -1,5 +1,5 @@
 import categories from "@/app/data/categories.json"
-import { Category } from "@/app/types"
+import type { Category } from "@/app/types"
 
 export function getAllCategories(): Category[] {
     return categories

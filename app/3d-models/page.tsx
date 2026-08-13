@@ -1,5 +1,5 @@
 import { getAllModels } from "@/app/lib/models"
-import ModelsGrid from "../components/ModelsGrid"
+import ModelsGrid from "@/app/components/ModelsGrid"
 
 export default async function ModelsPage() {
     const models = await getAllModels()
